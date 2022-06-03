@@ -1,0 +1,73 @@
+@import "../variables";
+@import "../functions";
+
+.nintendo__main{
+    display: grid;
+    grid-template-areas: "header info";
+    grid-template-columns: 150px 1fr;
+    width: 100vw;
+    height: 100vh;
+    @include media-query(sm){
+        grid-template-areas: "header"
+                            "info";
+        grid-template-columns: 100vw;
+        grid-template-rows: 150px auto;
+    }
+}
+.nintendo__info{
+    grid-area: info;
+    background-color: white;
+    margin-top: 100px;
+    margin-right: 150px;
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo img"
+    "info info img"
+    "info info btn"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto auto;
+    align-items: center;
+    justify-content: center;
+    @include media-query(sm){
+        grid-template-areas: "titulo"
+                            "img"
+                            "info"
+                            "btn";
+        grid-template-columns: 100vw;
+        grid-template-rows: 100px 200px auto auto;
+        margin: 0;
+        justify-items: center;
+        text-align: center;
+    }
+    &--img{
+        width: 100%;
+        margin: 25px;
+        grid-area: img;
+        @include media-query(sm){
+            width: auto;
+            height: 100%;
+            margin: 0;
+        }
+    }
+    &--titulo{
+        grid-area: titulo;
+        font-size: 36px;
+        margin-left: 25px;
+        @include media-query(sm){
+            margin: 0;
+        }
+    }
+    &--div{
+        grid-area: info;
+        margin: 25px;
+    }
+    &--btn{
+        grid-area: btn;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}

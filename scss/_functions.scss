@@ -1,0 +1,25 @@
+// Funcion para ajustar los tamaños
+
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// Funcion para ajustar el padding
+
+@mixin paddingLR($value) {
+    padding-left: $value;
+    padding-right: $value;
+}
+
+@mixin media-query($break-point){
+    @if ($break-point == md){
+        @media (max-width: 768px){
+            @content;
+        }
+    }@else if ($break-point == sm){
+        @media (max-width: 576px){
+            @content;
+        }
+    }
+}
