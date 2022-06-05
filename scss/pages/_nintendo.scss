@@ -7,13 +7,13 @@
     grid-template-columns: 150px 1fr;
     width: 100vw;
     height: 100vh;
-    @include media-query(sm){
+    @include media-query(md){
         grid-template-areas: "header"
                             "info";
         grid-template-columns: 100vw;
-        grid-template-rows: 150px auto;
+        grid-template-rows: 120px auto;
     }
-}
+}   
 .nintendo__info{
     grid-area: info;
     background-color: white;
@@ -40,15 +40,31 @@
         justify-items: center;
         text-align: center;
     }
+    @include media-query(md){
+        grid-template-areas: "titulo"
+                            "img"
+                            "info"
+                            "btn";
+        grid-template-columns: 100vw;
+        grid-template-rows: 100px 200px auto auto;
+        margin: 0;
+        justify-items: center;
+        text-align: center;
+    }
     &--img{
         width: 100%;
         margin: 25px;
         grid-area: img;
+        @include media-query(md){
+            width: 50%;
+            margin: 0;
+        }
         @include media-query(sm){
             width: auto;
             height: 100%;
             margin: 0;
         }
+        
     }
     &--titulo{
         grid-area: titulo;

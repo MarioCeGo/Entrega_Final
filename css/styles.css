@@ -21,16 +21,19 @@ header {
   flex-direction: column;
   align-items: center;
   height: 100vh; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     header {
       width: 100%;
-      height: 150px;
+      height: 120px;
       align-items: center; } }
   header ul {
     list-style: none;
     width: 100%;
     margin-top: 100px; }
     @media (max-width: 576px) {
+      header ul {
+        margin-top: 15px; } }
+    @media (max-width: 768px) {
       header ul {
         margin-top: 15px; } }
     header ul li {
@@ -59,6 +62,17 @@ header {
           font-size: 16px;
           margin-left: 25px;
           margin-right: 25px; } }
+      @media (max-width: 768px) {
+        header ul li {
+          width: 100vw;
+          height: 150px;
+          display: flex;
+          flex-wrap: wrap;
+          width: 10px;
+          height: 10px;
+          font-size: 16px;
+          margin-left: 25px;
+          margin-right: 25px; } }
     header ul #playStation--li li:hover {
       border-right: 15px solid;
       border-color: #0000ff; }
@@ -72,17 +86,17 @@ header {
     margin-top: 50px;
     font-weight: bold;
     font-size: 24px; }
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       header p {
         margin-top: 15px; } }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .nav_no_mobile {
     display: none; } }
 
 .nav_mobile {
   display: none; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .nav_mobile {
       display: flex;
       justify-content: space-evenly; } }
@@ -146,11 +160,11 @@ header {
   grid-template-columns: 150px 1fr;
   width: 100vw;
   height: 100vh; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .index__main {
       grid-template-areas: "header" "home";
       grid-template-columns: 100vw;
-      grid-template-rows: 150px auto; } }
+      grid-template-rows: 120px auto; } }
 
 .index__main--header {
   grid-area: header; }
@@ -164,18 +178,20 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 768px) {
+    .index__main--home {
+      margin: 0; } }
   @media (max-width: 576px) {
     .index__main--home {
       margin: 0;
       grid-template-columns: 100vw;
       grid-template-rows: repeat(3, 300px); } }
   .index__main--home img {
-    width: 100%;
-    margin: 25px; }
+    width: 100%; }
     @media (max-width: 576px) {
       .index__main--home img {
         width: 80%;
-        height: 100%;
+        height: 300px;
         margin: 0; } }
   .index__main--home a {
     width: 100%;
@@ -214,11 +230,11 @@ header {
   grid-template-columns: 150px 1fr;
   width: 100vw;
   height: 100vh; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .nintendo__main {
       grid-template-areas: "header" "info";
       grid-template-columns: 100vw;
-      grid-template-rows: 150px auto; } }
+      grid-template-rows: 120px auto; } }
 
 .nintendo__info {
   grid-area: info;
@@ -239,10 +255,22 @@ header {
       margin: 0;
       justify-items: center;
       text-align: center; } }
+  @media (max-width: 768px) {
+    .nintendo__info {
+      grid-template-areas: "titulo" "img" "info" "btn";
+      grid-template-columns: 100vw;
+      grid-template-rows: 100px 200px auto auto;
+      margin: 0;
+      justify-items: center;
+      text-align: center; } }
   .nintendo__info--img {
     width: 100%;
     margin: 25px;
     grid-area: img; }
+    @media (max-width: 768px) {
+      .nintendo__info--img {
+        width: 50%;
+        margin: 0; } }
     @media (max-width: 576px) {
       .nintendo__info--img {
         width: auto;
@@ -271,11 +299,11 @@ header {
   grid-template-columns: 150px 1fr;
   width: 100vw;
   height: 100vh; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .xbox__main {
       grid-template-areas: "header" "infoXbox";
       grid-template-columns: 100vw;
-      grid-template-rows: 150px auto; } }
+      grid-template-rows: 120px auto; } }
 
 .xbox__info {
   grid-area: infoXbox;
@@ -288,7 +316,7 @@ header {
   grid-template-rows: 100px auto auto;
   align-items: center;
   justify-content: center; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .xbox__info {
       grid-template-areas: "tituloX" "imgX" "infoX" "btnX";
       grid-template-columns: 100vw;
@@ -300,6 +328,10 @@ header {
     width: 115%;
     margin: 25px;
     grid-area: imgX; }
+    @media (max-width: 768px) {
+      .xbox__info--img {
+        width: 40%;
+        margin: 0; } }
     @media (max-width: 576px) {
       .xbox__info--img {
         width: auto;
@@ -324,11 +356,11 @@ header {
   grid-template-columns: 150px 1fr;
   width: 100vw;
   height: 100vh; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .playStation__main {
       grid-template-areas: "header" "infoPlay";
       grid-template-columns: 100vw;
-      grid-template-rows: 150px auto; } }
+      grid-template-rows: 120px auto; } }
 
 .playStation__info {
   grid-area: infoPlay;
@@ -341,7 +373,7 @@ header {
   grid-template-rows: 100px auto auto;
   align-items: center;
   justify-content: center; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .playStation__info {
       grid-template-areas: "tituloP" "imgP" "infoP" "btnP";
       grid-template-columns: 100vw;
@@ -354,6 +386,10 @@ header {
     margin: 25px;
     margin-left: 100px;
     grid-area: imgP; }
+    @media (max-width: 768px) {
+      .playStation__info--img {
+        width: 30%;
+        margin: 0; } }
     @media (max-width: 576px) {
       .playStation__info--img {
         width: auto;
@@ -379,11 +415,11 @@ header {
   grid-template-columns: 150px 1fr;
   width: 100vw;
   height: 100vh; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .consulta__main {
       grid-template-areas: "header" "consulta";
       grid-template-columns: 100vw;
-      grid-template-rows: 150px auto; } }
+      grid-template-rows: 120px auto; } }
 
 .consulta__area {
   grid-area: consulta;
@@ -395,7 +431,7 @@ header {
   grid-template-areas: "tituloConsulta tituloConsulta" "form imgConsulta";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px 1fr; }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .consulta__area {
       grid-template-areas: "tituloConsulta" "imgConsulta" "form";
       grid-template-columns: 100vw;
@@ -413,7 +449,8 @@ header {
       .consulta__area h1 {
         padding: 0; } }
   .consulta__area .formulario {
-    grid-area: form; }
+    grid-area: form;
+    width: 90%; }
     .consulta__area .formulario form {
       display: flex;
       flex-direction: column; }
@@ -421,6 +458,7 @@ header {
         width: 100%;
         padding: 12px 20px;
         margin: 8px;
+        margin-left: 0;
         box-sizing: border-box;
         outline: none;
         transition: 500ms; }
@@ -432,9 +470,11 @@ header {
         border: none;
         border-radius: 4px;
         background-color: #f1f1f1;
-        margin: 8px; }
+        margin: 8px;
+        margin-left: 0; }
       .consulta__area .formulario form textarea {
         margin: 8px;
+        margin-left: 0;
         width: 100%;
         height: 150px;
         padding: 12px 20px;
@@ -454,6 +494,7 @@ header {
         border: 2px solid #393d46;
         cursor: pointer;
         margin: 10px;
+        margin-left: 0;
         font-size: 16px; }
         .consulta__area .formulario form input[type=submit]:hover {
           background-color: #393d46;
@@ -461,3 +502,9 @@ header {
   .consulta__area img {
     grid-area: imgConsulta;
     width: 100%; }
+    @media (max-width: 768px) {
+      .consulta__area img {
+        width: 50%; } }
+    @media (max-width: 576px) {
+      .consulta__area img {
+        width: 100%; } }

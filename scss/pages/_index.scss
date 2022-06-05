@@ -7,12 +7,11 @@
     grid-template-columns: 150px 1fr;
     width: 100vw;
     height: 100vh;
-    @include media-query(sm){
+    @include media-query(md){
         grid-template-areas: "header"
                             "home";
         grid-template-columns: 100vw;
-        grid-template-rows: 150px auto;
-        
+        grid-template-rows: 120px auto;
     }
 }
 .index__main--header{
@@ -27,18 +26,22 @@
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
+    @include media-query(md){
+        margin: 0;
+    }
     @include media-query(sm){
         margin: 0;
         grid-template-columns: 100vw;
         grid-template-rows: repeat(3, 300px);
         
     }
+    
     img{
         width: 100%;
-        margin: 25px;
+        // margin: 25px;
         @include media-query(sm){
             width: 80%;
-            height: 100%;
+            height: 300px;
             margin: 0;
         }
     }
